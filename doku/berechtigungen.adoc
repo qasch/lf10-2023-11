@@ -68,6 +68,10 @@ Das Ausführungsbit auf Verzeichnisse sollte also immer in Kombination mit dem L
   111101100
  -rwxr-xr--
 
+== Todo
+
+- Übungen machen
+
 
 
 
