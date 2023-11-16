@@ -1,0 +1,73 @@
+= Berechtigungen
+:toc:
+
+== Rechte
+
+  u    g   o
+ -rw- r-- r-- 1 tux tux    0 Nov 13 11:40 newfile
+
+- `r` read/lesen
+- `w` write/schreiben
+- `x` eXecute/ausführen
+
+== Bedeutung der Berechtigungen
+
+=== auf Dateien
+
+- `r` read/lesen -> Inhalt der Datei lesen
+- `w` write/schreiben -> Inhalt der Datei ändern
+- `x` eXecute/ausführen -> Datei ausführen
+
+=== auf Verzeichnisse
+
+- `r` read/lesen -> Verzeichnisinhalt lesen
+- `w` write/schreiben -> Dateien im Verzeichnis erstellen oder löschen
+- `x` eXecute/ausführen -> Verzeichnis betreten
+
+Das Ausführungsbit auf Verzeichnisse sollte also immer in Kombination mit dem Leserecht gesetzt sein.
+
+== Berechtigungen ändern
+
+ chmod
+
+=== Symbolische Rechtevergabe
+
+- `r` read/lesen
+- `w` write/schreiben
+- `x` eXecute/ausführen
+
+- `u` User/Owner/Besitzer der Datei
+- `g` Group/Gruppe
+- `o` Others/Andere/Rest der Welt
+- `a` All/Alle
+
+ chmod o-r newfile
+ chmod g+w newfile
+ chmod u+x,g-w,o-r newfile
+
+=== Numerische/Oktale Rechtevergabe
+
+- `r` read/lesen -> 4
+- `w` write/schreiben -> 2
+- `x` eXecute/ausführen -> 1
+
+ chmod 640 newfile  (rw-r-----)
+ chmod 754 newfile  (rwxr-xr--)
+
+==== Herkunft
+
+ Okt Bin
+  1  001
+  2  010 
+  3  011 
+  4  100  
+  5  101  
+  6  110  
+  7  111  
+
+  111101100
+ -rwxr-xr--
+
+
+
+
