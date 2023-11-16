@@ -71,6 +71,7 @@ Das Ausführungsbit auf Verzeichnisse sollte also immer in Kombination mit dem L
 == Todo
 
 - Übungen machen
+- änderung auf github
 
 
 
